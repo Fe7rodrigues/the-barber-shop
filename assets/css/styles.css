@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Karantina&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(204, 7.46%, 26.27%);
+    --first-color-alt: hsl(2, 89%, 53%);
+    --title-color: #F2DAC2;
+    --text-color: #977656;
+    --body-color: hsl(2, 100%, 97%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Karantina', bold;
+    --second-font: 'Inter', cursive;
+    --body-font-sub: 'Karantina', regular;
+    --biggest-font-size: 2.25rem;
+    --normal-font-size: .938rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--first-color);
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header.stcky {
+    padding: 5px 100px;
+    background: #fff;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    font-family: var(--body-font);
+    font-size:   var(--biggest-font-size);
+    text-transform: uppercase
+}
+
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/assets/img/bg-image.png);
+    background-size: cover;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: var(--body-color);
+}
+
+/*=============== HOME ===============*/
+.home,
+.home__data{
+  position: absolute;
+}
+
+.home__title {
+    position: absolute;
+    top: -485px;
+    left: 100px;
+    width: 500px;
+    font-size: 60px;
+    color: var(--title-color);
+    font-family: var(--body-font);
+}
+
+.home__title span {
+color: var(--text-color);
+font-family: var(--body-font-sub);
+font-size: 35px;
+}
