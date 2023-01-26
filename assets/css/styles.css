@@ -19,7 +19,20 @@
     --body-font-sub: 'Karantina', regular;
     --biggest-font-size: 2.25rem;
     --normal-font-size: .938rem;
+
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
 }
+
 
 * {
     box-sizing: border-box;
@@ -157,6 +170,116 @@ header.sticky ul li a {
     top: -350px;
 }
 
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-branding{
+    font-size: 2rem;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: aqua;
+}
 
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
 
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    background-color: white;
+}
 
+@media screen and (max-width: 900px) {
+.nav__link {
+    display: none;
+}
+}
+
+@media(max-width:768px){
+
+    header {
+        padding: 9px 20px;
+        left: -9px;  
+    }
+
+    .banner {
+    
+    }
+
+    .home__title {
+        position: absolute;
+        top: -500px;
+        left: 89px;
+        width: 500px;
+        font-size: 56px;
+        display: block;
+    }
+
+    .home__title span {
+        font-size: 20px;
+        margin-left: -39px;
+    }
+
+    .home__description {
+        position: absolute;
+        font-size: 11px;
+        width: 308px;
+        left: 48px;
+        top: -373px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        opacity: 0;
+        top: 0px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 1s;
+        background-color: #1f1e1e;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        right: 109px;
+        opacity: 100;
+    }
+
+    .ri-shopping-bag-fill {
+    display: none;}
+}
