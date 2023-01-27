@@ -190,10 +190,10 @@ header.sticky ul li a {
     transition: 0.7s ease;
 }
 .nav-link:hover{
-    color: aqua;
+    color: var(--body-color);
 }
 
-.hamburger{
+.hamburger {
     display: none;
     cursor: pointer;
 }
@@ -205,20 +205,26 @@ header.sticky ul li a {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    background-color: white;
+    background-color: var(--title-color);
 }
 
-@media screen and (max-width: 900px) {
-.nav__link {
-    display: none;
-}
+.ri-align-justify {
+display: none;
 }
 
-@media(max-width:768px){
+/*=============== BREAKPOINTS ===============*/
+
+/* Para pequenos dispositivos */
+
+@media(max-width: 340px){
 
     header {
-        padding: 9px 20px;
-        left: -9px;  
+        margin-inline: 1rem;
+    }
+
+    .logo img {
+    width: 15px;
+    text-align: left;
     }
 
     .banner {
@@ -249,6 +255,7 @@ header.sticky ul li a {
 
     .hamburger{
         display: block;
+        padding-left: 15px;
     }
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
@@ -279,7 +286,4 @@ header.sticky ul li a {
         right: 109px;
         opacity: 100;
     }
-
-    .ri-shopping-bag-fill {
-    display: none;}
 }
